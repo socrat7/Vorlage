@@ -6,10 +6,10 @@
 					<content>
 						<Panel headerText="Título del panel" class="sapUiResponsiveMargin" width="auto">
 							<content>
-								<Button icon="sap-icon://feedback" text="Say Hello" press=".onShowHello" type="Accept" class="myCustomButton" />
-								<Input value="{/recipient/name}"  valueLiveUpdate="true" width="60%" />
-								<FormattedText htmlText="Hello {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" />
+							
+								<!--  CRUD View  -->							   
 								<mvc:XMLView viewName="crud01.view.Table"/>
+								
 							</content>
 						</Panel>
 					</content>

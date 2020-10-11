@@ -1,18 +1,123 @@
-<mvc:View
-	controllerName="crud01.controller.Table"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Panel
-		headerText="Vista Incrustada con su propio controlador"
-		class="sapUiResponsiveMargin"
-		width="auto">
-		<content>
-			<Button
-			    icon="sap-icon://database"
-				id="helloDialogButton"
-				text="Say Hello with Dialog"
-				press=".onOpenDialog"
-				class="sapUiSmallMarginEnd"/>
-		</content>
-	</Panel>
-</mvc:View>
+<core:View  xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" controllerName="crud01.controller.Table" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true">
+	
+		
+		<Table id="idEmployeeTable" inset="false" mode="SingleSelectLeft" items="{
+							path: 'empModel>/ztableSet'
+				}">
+
+			<headerToolbar>
+
+				<Toolbar>
+					<Title text="Employee Details" level="H2" />
+				</Toolbar>
+
+			</headerToolbar>
+
+			<columns>
+
+				<Column>
+					<Text text="Employee ID" />
+				</Column>
+
+				<Column>
+					<Text text="First Name" />
+				</Column>
+
+				<Column>
+					<Text text="Last Name" />
+				</Column>
+
+				<Column>
+					<Text text="Address" />
+				</Column>
+
+				<Column>
+					<Text text="Designation" />
+				</Column>
+
+			</columns>
+
+			<items>
+
+				<ColumnListItem>
+
+					<cells>
+
+						<Text text="{empModel>Empno}" />
+						<Text text="{empModel>Fname}" />
+						<Text text="{empModel>Lname}" />
+						<Text text="{empModel>Addrs}" />
+						<Text text="{empModel>Desgn}" />
+
+					</cells>
+
+				</ColumnListItem>
+
+			</items>
+
+		</Table>
+
+		<Button id="IdDisplay" press="onDisplay" text="Display"  class="myCustomButton" />
+		<Button id="IdUpdate" press="onUpdate" text="Update" type="Ghost" />
+		<Button id="IdCreate" press="onCreate" text="Create" type="Emphasized" />
+		<Button id="IdDelete" press="onDelete" text="Delete" type="Reject" />
+
+		<VBox class="sapUiSmallMargin">
+
+			<f:Form id="Form1" editable="true">
+
+				<f:title>
+					<core:Title text="Employee"   />
+				</f:title>
+				<f:layout>
+					<f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+				</f:layout>
+				<f:formContainers>
+					<f:FormContainer>
+						<f:formElements>
+
+							<f:FormElement label="Employee iD">
+								<f:fields>
+									<Input value="" id="empId" />
+								</f:fields>
+							</f:FormElement>
+
+							<f:FormElement label="Firstname">
+								<f:fields>
+									<Input value="" id="fnameId" />
+								</f:fields>
+							</f:FormElement>
+
+							<f:FormElement label="Lastname">
+								<f:fields>
+									<Input value="" id="lnameId" />
+								</f:fields>
+							</f:FormElement>
+
+							<f:FormElement label="Address">
+								<f:fields>
+									<Input value="" id="addrsId" />
+								</f:fields>
+							</f:FormElement>
+
+							<f:FormElement label="Designation">
+								<f:fields>
+									<Input value="" id="desgnId" />
+								</f:fields>
+							</f:FormElement>
+
+							<f:FormElement label="">
+								<f:fields>
+									<Button id="saveBtnId" text="Save" press="onSave" type="Accept" />
+								</f:fields>
+							</f:FormElement>
+
+						</f:formElements>
+					</f:FormContainer>
+				</f:formContainers>
+			</f:Form>
+		</VBox>
+
+
+
+</core:View>
