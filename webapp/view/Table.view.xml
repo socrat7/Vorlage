@@ -1,0 +1,18 @@
+<mvc:View
+	controllerName="crud01.controller.Table"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Panel
+		headerText="Vista Incrustada con su propio controlador"
+		class="sapUiResponsiveMargin"
+		width="auto">
+		<content>
+			<Button
+			    icon="sap-icon://database"
+				id="helloDialogButton"
+				text="Say Hello with Dialog"
+				press=".onOpenDialog"
+				class="sapUiSmallMarginEnd"/>
+		</content>
+	</Panel>
+</mvc:View>

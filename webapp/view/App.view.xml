@@ -1,13 +1,15 @@
 <mvc:View controllerName="crud01.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
 	<Shell>
-		<App>
+		<App class="myAppDemoWT">
 			<pages>
 				<Page title="Título de página">
 					<content>
 						<Panel headerText="Título del panel" class="sapUiResponsiveMargin" width="auto">
 							<content>
-								<Button text="Say Hello" press=".onShowHello" type="Accept" />
-								<Input value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%" />
+								<Button icon="sap-icon://feedback" text="Say Hello" press=".onShowHello" type="Accept" class="myCustomButton" />
+								<Input value="{/recipient/name}"  valueLiveUpdate="true" width="60%" />
+								<FormattedText htmlText="Hello {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" />
+								<mvc:XMLView viewName="crud01.view.Table"/>
 							</content>
 						</Panel>
 					</content>
