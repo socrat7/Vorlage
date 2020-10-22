@@ -19,17 +19,7 @@ sap.ui.define([
 			MessageToast.show("Hallo " + sRecipient);
 		}
 		
-		
-		
-
-		
-		
 	});
-	
-	
-	
-	
-	
 	
 	
 });

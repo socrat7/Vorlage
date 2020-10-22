@@ -78,7 +78,10 @@
 
 							<f:FormElement label="Employee iD">
 								<f:fields>
-									<Input value="" id="empId" />
+									<Input 
+										value="" 
+										id="empId" 
+										type="Number"/>
 								</f:fields>
 							</f:FormElement>
 

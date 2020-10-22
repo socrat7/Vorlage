@@ -14,6 +14,7 @@ sap.ui.define([
 		// init - DataBinding
 		onInit: function() {
 
+		//Obtenermos los servicions ODTA
 		var oModel = new sap.ui.model.odata.ODataModel("proxy/http/vhcalnplci:8000/sap/opu/odata/sap/ZTABLE_SRV/");
 		
 		//para poder actualizar nuetsra pagina por ejemplo con el update tenemos que agregar un ID al model

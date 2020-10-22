@@ -1,0 +1,27 @@
+<core:View  
+xmlns:core="sap.ui.core" 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+xmlns:l="sap.ui.layout" 
+xmlns:f="sap.ui.layout.form" 
+controllerName="crud01.controller.TableOdata" 
+xmlns:html="http://www.w3.org/1999/xhtml" 
+displayBlock="true">
+
+
+	<Table id="Idtable2"  inset="false" growing="true" growingScrollToLoad="true" alternateRowColors="true"
+	>
+	<headerToolbar>
+
+				<Toolbar>
+					<Title text="Tabla de empleados generada automaticamente del el servicio OData" level="H2" />
+				</Toolbar>
+
+   </headerToolbar>
+	<!-- Our code in the controller goes here -->
+	</Table>
+		
+
+
+
+</core:View>

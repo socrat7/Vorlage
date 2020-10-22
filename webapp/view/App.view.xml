@@ -10,6 +10,9 @@
 								<!--  CRUD View  -->							   
 								<mvc:XMLView viewName="crud01.view.Table"/>
 								
+								<!--  Tabla creada dinamicamente con OData  -->							   
+								<mvc:XMLView viewName="crud01.view.TableOdata"/>
+								
 							</content>
 						</Panel>
 					</content>
